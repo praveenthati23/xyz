@@ -27,5 +27,6 @@ jobs:
           host: ${{ secrets.EC2_IP }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 2222
           script: |
             rsync -av --exclude 'wp-config.php' --exclude 'wp-content/uploads/' ./ /var/www/html/
